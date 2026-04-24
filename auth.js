@@ -1,13 +1,11 @@
-// auth.js
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
 import { 
   getAuth, signInWithEmailAndPassword, createUserWithEmailAndPassword,
   GoogleAuthProvider, signInWithPopup, updateProfile
 } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 
-// ⚠️ YOUR FIREBASE KEYS GO HERE ⚠️
 const firebaseConfig = {
-  apiKey: "AIzaSyCR4EA-cDojJtYkTAQSAvtTh4_3pEsYm0o",
+  apiKey: "AIzaSyCR4EA-cDojJtYkTAQSAvtTh4_3pEsYm0o", // <-- PASTE YOUR REAL API KEY HERE
   authDomain: "jarvis-auth-7c928.firebaseapp.com",
   projectId: "jarvis-auth-7c928",
   storageBucket: "jarvis-auth-7c928.firebasestorage.app",
@@ -20,10 +18,9 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const googleProvider = new GoogleAuthProvider();
 
-// Override the dummy functions in your HTML
 window.googleLogin = function() {
   signInWithPopup(auth, googleProvider).then(() => {
-    window.location.href = "index.html"; // Change to your chat page
+    window.location.href = "index.html"; 
   }).catch(e => alert("Google Auth Failed: " + e.message));
 };
 
@@ -33,7 +30,7 @@ window.emailLogin = function() {
   if(!email || !pass) return alert("Fill in all fields");
 
   signInWithEmailAndPassword(auth, email, pass).then(() => {
-    window.location.href = "index.html"; // Change to your chat page
+    window.location.href = "index.html"; 
   }).catch(e => alert("Access Denied: " + e.message));
 };
 
@@ -45,7 +42,7 @@ window.emailSignup = function() {
 
   createUserWithEmailAndPassword(auth, email, pass).then((userCred) => {
     updateProfile(userCred.user, { displayName: name }).then(() => {
-      window.location.href = "index.html"; // Change to your chat page
+      window.location.href = "index.html"; 
     });
   }).catch(e => alert("Registration Failed: " + e.message));
 };
