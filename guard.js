@@ -1,4 +1,5 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-app.js";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-auth.js";
 
 // ⚠️ PASTE YOUR FIREBASE CONFIG HERE (Same one you used in auth.js) ⚠️
