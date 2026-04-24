@@ -7,12 +7,13 @@ import {
 
 // ⚠️ YOUR FIREBASE KEYS GO HERE ⚠️
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "123456789",
-  appId: "1:123456789:web:abcdef123"
+  apiKey: "AIzaSyCR4EA-cDojJtYkTAQSAvtTh4_3pEsYm0o",
+  authDomain: "jarvis-auth-7c928.firebaseapp.com",
+  projectId: "jarvis-auth-7c928",
+  storageBucket: "jarvis-auth-7c928.firebasestorage.app",
+  messagingSenderId: "536076036655",
+  appId: "1:536076036655:web:488063abc93731445574da",
+  measurementId: "G-DLVJWMFWRS"
 };
 
 const app = initializeApp(firebaseConfig);
